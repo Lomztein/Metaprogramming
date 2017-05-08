@@ -36,7 +36,7 @@ public class Codeblock : MonoBehaviour {
 
     public static GameObject CreateComment (string text, Transform parentContainer) {
         GameObject newBlock = (GameObject)Instantiate (blockPrefab, parentContainer);
-        CodeblockData data = CodeblockData.CreateInstance<CodeblockData>();
+		CodeblockData data = new CodeblockData ();
 
         data.code = "\n// " + text + "\n";
         data.codeDesc = "Comment.";
@@ -49,10 +49,10 @@ public class Codeblock : MonoBehaviour {
         if (data.correct) {
             transform.SetParent (AllPanels.panels.codeSeqenceContainer);
             Codeblock[] blocks = AllPanels.panels.codeSeqenceContainer.GetComponentsInChildren<Codeblock> ();
-            AllPanels.panels.currentStep.currentBlocks.Remove (this.gameObject);
+			AllPanels.panels.level.currentBlocks.Remove (this.gameObject);
             TextPanel.GenerateText (blocks);
             Destroy (GetComponent<Button> ());
-            AllPanels.panels.currentStep.OnAddedToSequence ();
+            AllPanels.panels.level.OnAddedToSequence ();
         } else {
             StartCoroutine (FlashColor (Color.red));
             GetComponent<Button> ().interactable = false;

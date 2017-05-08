@@ -1,0 +1,67 @@
+{
+  "levelName": "Skeleton Code",
+  "startingCode": "// This is a skeleton file, here as a guideline on how to write levels for this program.",
+  "sequenceSteps": [
+    {
+      "stepComment": "Create x and y.",
+      "stepName": "Intro",
+      "resetAfter": false,
+      "codeBlocks": [
+        {
+          "code": "int x = 4;",
+          "codeDesc": "Create x integer.",
+          "correct": true
+        },
+        {
+          "code": "int y = 7;",
+          "codeDesc": "Create y integer",
+          "correct": true
+        },
+        {
+          "code": "System.exit ()",
+          "codeDesc": "Quit application.",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "stepComment": "Add them together.",
+      "stepName": "Basic Math",
+      "resetAfter": false,
+      "codeBlocks": [
+        {
+          "code": "for (int i = 0; i < 3; i++) {",
+          "codeDesc": "Create a loop.",
+          "correct": false
+        },
+        {
+          "code": "int result = x + y;",
+          "codeDesc": "Print x",
+          "correct": true
+        },
+        {
+          "code": "int result = x - y;",
+          "codeDesc": "Print x",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "stepComment": "Print them added.",
+      "stepName": "Printing",
+      "resetAfter": false,
+      "codeBlocks": [
+        {
+          "code": "if (banana) {",
+          "codeDesc": "Create if statement",
+          "correct": false
+        },
+        {
+          "code": "System.out.printLn(result);",
+          "codeDesc": "Print the result.",
+          "correct": true
+        }
+      ]
+    }
+  ]
+}
